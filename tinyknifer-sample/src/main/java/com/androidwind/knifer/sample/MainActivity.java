@@ -21,4 +21,10 @@ public class MainActivity extends AppCompatActivity {
         TinyViewBinder.bind(this);
         mTextView.setText("New Hello World!");
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        TinyViewBinder.unBind(this);
+    }
 }
